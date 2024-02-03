@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill Pill</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/pill_animation.css">
+</head>
+<body oncontextmenu="return false" class="restricted">
+    <script type="text/javascript" src="static/js/index.js"></script>
+
+    <center>
+        <div id="pill">
+            <div class="pill" id="pill-left"></div>
+            <span id="pill-text">CHILL PILL</span>
+            <div class="pill" id="pill-right"></div>
+        </div>
+    </center>
+
+    <!-- navigation bar. -->
+    <div class="navbar">
+        <a href="http://127.0.0.1:5000">☞&nbsp;&nbsp;New Entry</a>
+        <a href="entries">☞&nbsp;&nbsp;All Entries</a>
+        <a href="moodtracker">☞&nbsp;&nbsp;Mood Tracker</a>
+        <a href="team">☞&nbsp;&nbsp;The Team</a>
+    </div>
+
+    <center>
+        <div>
+            <!-- daily affirmation return with cat gif -->
+            <h2>{{ result }}</h2>
+            {% if daily_affirm %}
+                <h2>Your Daily Affirmation: {{ daily_affirm }}</h2>
+            {% endif %}
+            <div id="catGif"></div>
+            <script src="static/js/cat_gif.js"></script>
+        </div>
+    </center>
+</body>
+</html>

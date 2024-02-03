@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill Pill</title>
+    <link rel="stylesheet" href="/static/css/mood.css">
+    <link rel="stylesheet" href="/static/css/pill_animation2.css">
+</head>
+<body oncontextmenu="return false" class="restricted">
+
+    <center>
+        <div id="pill">
+            <div class="pill" id="pill-left"></div>
+            <span id="pill-text">CHILL PILL</span>
+            <div class="pill" id="pill-right"></div>
+        </div>
+    </center>
+
+    <!-- navigation bar. -->
+    <div class="navbar">
+        <!-- href links to pages. -->
+        <a href="http://127.0.0.1:5000">☞&nbsp;&nbsp;New Entry</a>
+        <a href="entries">☞&nbsp;&nbsp;All Entries</a>
+        <a href="moodtracker">☞&nbsp;&nbsp;Mood Tracker</a>
+        <a href="team">☞&nbsp;&nbsp;The Team</a>
+    </div>
+
+    <div class="tracker" action="http://127.0.0.1:5000/moodtracker" method="GET">
+        <form id="mood">
+            <div class="plot">
+                <!-- plot -->
+                {{ plot_1 }}
+            </div>  
+        </form>
+        <div id="sentiment">
+            <!-- mood analysis results -->
+            {{ lowest }}
+            <hr>
+            {{ last_seven_avg_sentiment }}
+            <hr>
+            {{ highest }}
+        </div>   
+    </div>
+</body>
+</html>

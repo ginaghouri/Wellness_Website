@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    background-color: #f9dee2;
+    margin: 40px;
+
+    /* width of navbar. */
+    margin-left: 180px;
+    cursor: cell;
+}
+
+
+/* prevent copying from the page. */
+.restricted {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+h1 {
+    font-family: 'Bebas Neue', 'Georgia', Times, serif;
+    text-align: center;
+    color: #a61266;
+    margin: 40px;
+}
+
+
+/* style navbar. */
+.navbar {
+    /* navbar width. */
+    width: 180px;
+    position: fixed;
+
+    /* text padding. */
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    /* navbar position. */
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    background-color: #ffffed;
+}
+
+
+/* style navbar links. */
+.navbar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #a61266;
+
+    /* on separate lines. */
+    display: block;
+}
+
+
+/* text changes on hover. */
+.navbar a:hover {
+    color: #f9dee2;
+    font-size: 16px;
+}
+
+
+/* style unordered list. */
+.social {
+    list-style: none;
+    text-align: center;
+    margin-left: -40px;
+    margin-top: 50px;
+}
+
+
+/* style text in ul. */
+.social a {
+    color: #a61266;
+}
+
+
+/* center div. */
+.journal-page {
+    display: block;
+    text-align: center;
+}
+
+
+#journal {
+    font-family: 'Georgia', Times, serif;
+    color: #1277a6;
+}
+
+
+textarea {
+    width: 50%;
+    height: 350px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    border: 1px dashed #a61266;
+    background-color: #ffffef;
+    padding: 10px 5px 10px 10px;
+}
+
+
+button { 
+    color: #a61266;
+    font-family: "Times New Roman", Times, serif;
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    background: #ffffec;
+
+    border: outset #ffffec;
+    border-width: 3px;
+
+    transition: color 0.25s, background-color 0.25s, transform 0.25s;
+}
+
+
+button:hover {
+    cursor: grab;
+
+    color: #ffffec;
+    background-color: #a61266;
+
+    transform: scale(1.10);
+}
+
+#label {
+    padding: 0px;
+    margin: 0px;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+}
+
+#timestamp {
+    padding: 0px;
+    margin: 0px;
+
+    font-size: 15px;
+}
+
+
+p {
+    font-family: 'Georgia', Times, serif;
+    color: #1277a6;
+    font-size: 13px;
+}
+
+h2{
+    color: #a61266;
+    font-family: "Times New Roman", Times, serif;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 40px;
+    text-align: center;
+    }
+    
+    

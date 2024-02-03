@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-color: #f9dee2;
+    margin: 40px;
+    cursor: cell;
+}
+
+.restricted {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* style navbar. */
+.navbar {
+    /* navbar width. */
+    width: 180px;
+    position: fixed;
+
+    /* text padding. */
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    /* navbar position. */
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    background-color: #ffffed;
+}
+
+/* style navbar links. */
+.navbar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #a61266;
+
+    /* on separate lines. */
+    display: block;
+}
+
+.navbar a:hover {
+    color: #f9dee2;
+    font-size: 16px;
+}
+
+div:not(.navbar):not(.pill) {
+    margin-left: 40px;
+    display: block;
+}
+
+.tracker {
+    margin-top: 50px;
+}
+
+.plot {
+    width: 800px;
+    height: 400px;
+    margin-left: 140px;
+    border-radius: 10px;
+}
+
+#sentiment {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1%;
+    width: 30%;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px; 
+    font-family: 'Poppins', sans-serif; 
+}
+

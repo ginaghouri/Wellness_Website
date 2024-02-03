@@ -1,0 +1,54 @@
+#pill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin: 40px;
+}
+
+.pill {
+    width: 63px;
+    height: 50px;
+
+    background-color: black;
+}
+
+#pill-left {
+    background-color: #a61266;
+
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    animation: left-pill-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#pill-right {
+    background-color: #ffffec;
+
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#pill-text {
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: black;
+    z-index: -1;
+
+    animation: pill-animation-text;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes left-pill-animation {
+    0% {
+        margin-right: 0px;
+    }
+    100% {
+        margin-right: 125px;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill Pill</title>
+    <link rel="stylesheet" href="/static/css/entry.css">
+    <link rel="stylesheet" href="/static/css/pill_animation2.css">
+</head>
+<body oncontextmenu="return false" class="restricted">
+    <script type="text/javascript" src="/static/js/entry.js"></script>
+
+    <center>
+        <div id="pill">
+            <div class="pill" id="pill-left"></div>
+            <span id="pill-text">CHILL PILL</span>
+            <div class="pill" id="pill-right"></div>
+        </div>
+    </center>
+
+    <!-- navigation bar. -->
+    <div class="navbar">
+        <a href="http://127.0.0.1:5000">☞&nbsp;&nbsp;New Entry</a>
+        <a href="entries">☞&nbsp;&nbsp;All Entries</a>
+        <a href="moodtracker">☞&nbsp;&nbsp;Mood Tracker</a>
+        <a href="team">☞&nbsp;&nbsp;The Team</a>
+    </div>
+
+    <div class="entry">
+        {% for item in entry_data %}
+            <form id="update" action="http://127.0.0.1:5000/update/{{ item._id['$oid'] }}" method="POST">
+                <p id="timestamp">{{ item.timestamp }}</p>
+                <textarea id="entry" name="entry" readonly>{{ item.body }}</textarea>
+                <p id="sentiment">sentiment: {{ item.sentiment }}</p>
+            
+                <div class="action-buttons">
+                    
+                    <!-- update functionality. -->
+                    <button type="button" onclick="editUpdating()">Update</button>
+                    <button type="submit" id="save-update">Save</button>
+            </form>
+
+                <!-- delete functionality. -->
+                <form id="delete" action="http://127.0.0.1:5000/delete/{{ item._id['$oid'] }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this entry?')">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+            
+        <!-- in case of an error. -->
+        <p id="error">{{ result }}</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

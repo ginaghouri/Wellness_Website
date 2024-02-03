@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill Pill</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/pill_animation.css">
+</head>
+<!-- oncontextmenu disables right click. -->
+<body oncontextmenu="return false" class="restricted">
+    <script type="text/javascript" src="/static/js/index.js"></script>
+    
+    <center>
+        <div id="pill">
+            <div class="pill" id="pill-left"></div>
+            <span id="pill-text">CHILL PILL</span>
+            <div class="pill" id="pill-right"></div>
+        </div>
+    </center>
+
+    <!-- navigation bar. -->
+    <div class="navbar">
+        <a href="http://127.0.0.1:5000">☞&nbsp;&nbsp;New Entry</a>
+        <a href="entries">☞&nbsp;&nbsp;All Entries</a>
+        <a href="moodtracker">☞&nbsp;&nbsp;Mood Tracker</a>
+        <a href="team">☞&nbsp;&nbsp;The Team</a>
+    </div>
+
+    <!-- journal page. -->
+    <div class="journal-page">
+        <form id="journal" action="http://127.0.0.1:5000/journal" method="POST">
+            
+            <!-- running timestamp. -->
+            <div id="label" for="entry">
+                <strong>Journal Entry</strong>
+                <p id="timestamp"></p>
+            </div>
+
+            <textarea id="entry" name="entry" placeholder="How are you doing?"></textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <br><br>
+
+        <!--- amends web page to show an error message. -->
+        {% if result %}
+        <p><strong>
+            {{ result }}</strong>
+        </p>
+        {% endif %}
+    </div>
+
+    <!-- Github source code link. -->
+    <ul class="social">
+        <a href="https://github.com/sai-ma/cfg_group5" target="_blank">Source Code</a>
+    </ul>
+</body>
+</html>
